@@ -16,17 +16,19 @@
 	<div id="header">
 		<h1><%= link_to 'WhoDoTheyKnow?', root_url %></h1>
 		<p class="byline">Connecting the links between government and the media</p>
-	</div>
-	         
-	<div id="content">
-		<%= yield %>
-	</div>            
-	       
-	<div id="footer">
-		Created by <%= link_to 'Jordan Hatch', 'http://jordanh.net/' %> in <%= link_to 'Young Rewired State 2011', 'http://youngrewiredstate.org/' %>
+	</div>       
+	
+	<div class="wrap">         
+		<div id="content">
+			<%= yield %>
+		</div>            
 	</div>
 	
-</div>                                 
+</div>                    
+
+<div id="footer">
+	Created by <%= link_to 'Jordan Hatch', 'http://jordanh.net/' %> in <%= link_to 'Young Rewired State 2011', 'http://youngrewiredstate.org/' %>
+</div>             
 
 </body>
 </html>

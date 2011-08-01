@@ -1,4 +1,4 @@
-body, html { background: #D2DADD; height: 100%; }
+body, html { background: #D7DADD; height: 100%; }
 body { font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 14px; }
                                              
 a, a:link, a:visited { color: #4A73AE; }
@@ -9,11 +9,58 @@ h1 { font-size: 48px; font-family: 'Leckerli One', cursive; font-weight: normal;
 h2 { font-size: 24px; }                                    
 h3 { font-size: 18px; }
 
-#container { background: #fff; border: 3px solid #aaa; border-top: none; padding: 15px; margin: auto; width: 930px; }  
+#container { 
+	background: #fff;                 
+	border: 1px solid #bbb;
+	border-top: none;
+	border-bottom: 4px solid #ACB4B8;     
+	margin: auto; 
+	width: 960px; 
+}                                   
+#container .wrap {
+	padding: 15px;
+}
                                                                           
-#header { border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
+#header {                                                                         
+	background: #f6f6f6;                                                           
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6f6f6), to(#e9e9e9));
+  	background: -webkit-linear-gradient(top, #f6f6f6, #e9e9e9);
+  	background: -moz-linear-gradient(top, #f6f6f6, #e9e9e9);
+  	background: -ms-linear-gradient(top, #f6f6f6, #e9e9e9);
+  	background: -o-linear-gradient(top, #f6f6f6, #e9e9e9);
+	
+	border-bottom: 1px solid #ddd; 
+	padding: 15px; 
+}
 #header h1 a, #header h1 a:visited { text-decoration: none; color: #555; }
 #header h1 a:hover, #header h1 a:active { color: #324F78; }                                
-#header .byline { font-size: 18px; color: #bbb; }  
+#header .byline { font-size: 18px; color: #aaa; }        
+
+#person { } 
+#person h2 {            
+	font-size: 28px;
+	font-weight: 100;
+}                   
+#person h2 span {
+	display: inline-block;
+	vertical-align: middle;
+}
+#person .badge { 
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px; 
+	background: #ccc; 
+	display: inline-block;     
+	color: #333;           
+	text-shadow: #fff 0px 1px 1px;
+	padding: 6px 7px; 
+	font-size: 13px;         
+	font-weight: bold;
+	vertical-align: middle;     
+}
+#person .badge.government { background-color: #B0451E; color: #fff; text-shadow: #56210E 0px 1px 1px; }
+#person .badge.media { background-color: #B04173; color: #fff; text-shadow: #58203A 0px 1px 1px; }
+#person .badge.police { background-color: #365CB0; }
+#person .badge.judiciary { background-color: #599E25; }
 
 #footer { font-size: 12px; text-align: center; margin: 20px 0px 0px; }
+#footer a, #footer a:link, #footer a:visited { color: #666; }

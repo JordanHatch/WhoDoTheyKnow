@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110801102525) do
+ActiveRecord::Schema.define(:version => 20110801111721) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20110801102525) do
     t.text     "description"
     t.string   "friendly_url"
     t.integer  "company_id"
-    t.string   "field"
+    t.string   "department"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
