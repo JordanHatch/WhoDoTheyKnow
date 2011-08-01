@@ -1,6 +1,10 @@
 WhoDoTheyKnow::Application.routes.draw do
                              
-  resources :people
+  get "connections/new"
+
+  resources :people do
+    resources :connections, :only => [:new,:create,:edit,:update]
+  end
   
   root :to => 'people#index'
   

@@ -60,7 +60,13 @@ h3 { font-size: 18px; }
 #person .badge.government { background-color: #B0451E; color: #fff; text-shadow: #56210E 0px 1px 1px; }
 #person .badge.media { background-color: #B04173; color: #fff; text-shadow: #58203A 0px 1px 1px; }
 #person .badge.police { background-color: #365CB0; }
-#person .badge.judiciary { background-color: #599E25; }
+#person .badge.judiciary { background-color: #599E25; }   
+
+#person .connections { margin: 0px 0px 20px; width: 450px; }
+#person .connections li { border-bottom: 1px solid #eee; padding: 7px 0px; }
+#person .connections li h4 { font-size: 16px; font-weight: normal; margin-bottom: 4px;}
+#person .connections li h4 a { }   
+#person .connections li span { display: block; color: #666; font-size: 13px; }
 
 #footer { font-size: 12px; text-align: center; margin: 20px 0px 0px; }
 #footer a, #footer a:link, #footer a:visited { color: #666; }

@@ -10,6 +10,20 @@ class PeopleController < ApplicationController
       flash[:error] = 'Person does not exist yet.'
       redirect_to root_url                      
     end
+  end        
+  
+  def new
+    @person = Person.new
+  end
+  
+  def create
+    @person = Person.new(params[:person])
+  
+    if @person.save?
+      redirect_to person_url(@person)
+    else
+      render :action => :new
+    end
   end
 
 end

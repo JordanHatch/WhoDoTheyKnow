@@ -1,0 +1,8 @@
+<div id="person">
+	<h2><span><%= @person.name %></span> <%= department_for @person %></h2>
+	
+	<h3>New Connection</h3>
+	
+	<%= render :partial => 'form', :locals => { :mode => 'new' } %>
+
+</div>
