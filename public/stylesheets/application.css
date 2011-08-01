@@ -1,0 +1,19 @@
+body, html { background: #D2DADD; height: 100%; }
+body { font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 14px; }
+                                             
+a, a:link, a:visited { color: #4A73AE; }
+a:hover, a:active { color: #324F78; }
+                                                            
+h1, h2, h3 { margin-bottom: 10px; }
+h1 { font-size: 48px; font-family: 'Leckerli One', cursive; font-weight: normal; }
+h2 { font-size: 24px; }                                    
+h3 { font-size: 18px; }
+
+#container { background: #fff; border: 3px solid #aaa; border-top: none; padding: 15px; margin: auto; width: 930px; }  
+                                                                          
+#header { border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
+#header h1 a, #header h1 a:visited { text-decoration: none; color: #555; }
+#header h1 a:hover, #header h1 a:active { color: #324F78; }                                
+#header .byline { font-size: 18px; color: #bbb; }  
+
+#footer { font-size: 12px; text-align: center; margin: 20px 0px 0px; }

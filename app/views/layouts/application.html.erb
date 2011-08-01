@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WhoDoTheyKnow</title>
+
+  <%= stylesheet_link_tag 'master' %>  
+
+  <%= javascript_include_tag :defaults %>
+
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="container">
+	
+	<div id="header">
+		<h1><%= link_to 'WhoDoTheyKnow?', root_url %></h1>
+		<p class="byline">Connecting the links between government and the media</p>
+	</div>
+	         
+	<div id="content">
+		<%= yield %>
+	</div>            
+	       
+	<div id="footer">
+		Created by <%= link_to 'Jordan Hatch', 'http://jordanh.net/' %> in <%= link_to 'Young Rewired State 2011', 'http://youngrewiredstate.org/' %>
+	</div>
+	
+</div>                                 
+
+</body>
+</html>
