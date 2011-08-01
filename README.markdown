@@ -1,7 +1,7 @@
-WhatDoTheyKnow?
+WhoDoTheyKnow?
 ===============
 
-WhatDoTheyKnow is a web application aggregating and exposing the links between individuals in governments, the police and judiciary and those in the media, and displaying them in a way to make it much more accessible to the general public. It is being developed as a project for [Young Rewired State 2011](http://youngrewiredstate.org/).
+WhoDoTheyKnow is a web application aggregating and exposing the links between individuals in governments, the police and judiciary and those in the media, and displaying them in a way to make it much more accessible to the general public. It is being developed as a project for [Young Rewired State 2011](http://youngrewiredstate.org/).
 
 Data
 ----
