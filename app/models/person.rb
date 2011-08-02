@@ -8,16 +8,26 @@ class Person < ActiveRecord::Base
   has_many :linked_people_to, :through => :connections_to, :source => :person2
   has_many :linked_people_from, :through => :connections_from, :source => :person1
                                                                                                                          
-  before_create :create_friendly_url!
+  before_create :create_friendly_url!                    
+  
+  validates_presence_of :name, :department
+  validates_associated :company
+  validates_length_of :name, :minimum => 4, :maximum => 50
                       
   # merge relationships
   
   def connections
-    connections_to + connections_from
+    (connections_to + connections_from).sort_by(&:date)
   end
   
   def linked_people
     linked_people_to + linked_people_from
+  end   
+  
+  # tag cloud
+  
+  def self.to_histogram
+    Person.all.inject({}){|set, t| set[t.name] = t.connections_count; set }
   end
 
   # friendly url stuff

@@ -7,7 +7,11 @@ a:hover, a:active { color: #324F78; }
 h1, h2, h3 { margin-bottom: 10px; }
 h1 { font-size: 48px; font-family: 'Leckerli One', cursive; font-weight: normal; }
 h2 { font-size: 24px; }                                    
-h3 { font-size: 18px; }
+h3 { font-size: 18px; }            
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
 
 #container { 
 	background: #fff;                 
@@ -35,6 +39,27 @@ h3 { font-size: 18px; }
 #header h1 a, #header h1 a:visited { text-decoration: none; color: #555; }
 #header h1 a:hover, #header h1 a:active { color: #324F78; }                                
 #header .byline { font-size: 18px; color: #aaa; }        
+                    
+/** Homepage **/
+                        
+.cloud { 
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	background: #FADFFF;
+	border: 1px solid #BDAAC3; 
+	border-radius: 4px;
+	padding: 15px; 
+	width: 400px; 
+}              
+.cloud a {
+	color: #555;
+}               
+          
+.people { width: 400px; }
+.people ul.people_list li { font-size: 14px; padding: 4px 0px;}
+
+
+/** Person pages **/
 
 #person { } 
 #person h2 {            
@@ -61,12 +86,19 @@ h3 { font-size: 18px; }
 #person .badge.media { background-color: #B04173; color: #fff; text-shadow: #58203A 0px 1px 1px; }
 #person .badge.police { background-color: #365CB0; }
 #person .badge.judiciary { background-color: #599E25; }   
+                          
+#person .description { 
+	color: #777;
+	font-size: 14px;
+	font-style: italic; 
+	margin-bottom: 10px; 
+}
 
-#person .connections { margin: 0px 0px 20px; width: 450px; }
+#person .connections { margin: 0px 0px 20px; width: 500px; }
 #person .connections li { border-bottom: 1px solid #eee; padding: 7px 0px; }
 #person .connections li h4 { font-size: 16px; font-weight: normal; margin-bottom: 4px;}
 #person .connections li h4 a { }   
 #person .connections li span { display: block; color: #666; font-size: 13px; }
-
+                                  
 #footer { font-size: 12px; text-align: center; margin: 20px 0px 0px; }
 #footer a, #footer a:link, #footer a:visited { color: #666; }

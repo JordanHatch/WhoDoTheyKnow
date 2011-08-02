@@ -1,5 +1,13 @@
-<ul>
-<% @people.each do |p| -%>
-	<li><%= link_to p.name, p %></li>
-<% end %>
-</ul>
+<div class="cloud left">
+	<%= render :partial => 'cloud' %>
+</div>
+
+<div class="people right">
+	<ul class="people_list">
+	<% @people.each do |p| -%>
+		<li><%= link_to p.name, p %> (<%= p.connections_count %>)</li>
+	<% end %>
+	</ul>                     
+</div>
+
+<div class="clear"></div>

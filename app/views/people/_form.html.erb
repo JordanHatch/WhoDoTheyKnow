@@ -1,0 +1,29 @@
+<%= form_for @person do |f| %>
+	
+	<% if mode == 'new' -%>
+	<p>
+		<%= f.label :name, "Name" %>
+		<%= f.text_field :name %>	
+	</p>                            
+	<% end -%>
+	                      
+	<p>
+		<%= f.label :description, "Description" %>
+		<%= f.text_field :description %>
+	</p>                             
+	
+	<p>
+		<%= f.label :company_id, "Company" %>
+		<%= f.collection_select :company_id, @companies, :id, :name, :prompt => '(none)' %> <%= link_to 'new company', new_company_url %>
+	</p>                                                                                
+	
+	<p>
+		<%= f.label :department, "Department" %>
+	    <%= f.select :department, [ ['Government','government'], ['Media','media'], ['Police','police'], ['Judiciary','judiciary'] ] %>
+	</p>                                                                                                                             
+	
+	<p>
+		<%= f.submit "Save" %>
+	</p>
+   
+<% end %>

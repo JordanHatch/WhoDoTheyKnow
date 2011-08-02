@@ -1,15 +1,15 @@
 <div id="person">
 	<h2><span><%= @person.name %></span> <%= department_for @person %></h2>
-	
+	                            
 	<div class="description">
-	 
-   	</div>
+		<% if @person.description -%><%= @person.description %><% end -%> <% if @person.company.present? -%>- <%= link_to @person.company.name, company_url(@person.company) %><% end %>
+   	</div>                    
 
 	<div class="connections">
 		<ul>
 		<% @person.connections.each do |c| -%>
 			<li>
-				<h4><%= link_to c.person(@person).name, c.person(@person) %></h4>
+				<h4><%= link_to c.person(@person).name, c.person(@person) %> <!--<%= department_for c.person(@person) %>--></h4>
 				<span class="meta"><%= (c.description?) ? "#{c.description} - in" : "" %> <%= c.date.strftime("%B %Y") %> - <% if c.source == 'url' -%><% link_to 'source', c.source_url %><% elsif c.source == 'data' %>from dataset<% end %> <%= link_to "edit", edit_person_connection_url(c.person1, c) %></span>
 			</li>
 		<% end -%>
@@ -17,6 +17,6 @@
 	</div>
 	
 	<div class="add_connection">
-		<%= link_to 'Add a connection', new_person_connection_url(@person) %>
+		<%= link_to 'Add a connection', new_person_connection_url(@person) %> - <%= link_to 'Edit this person', edit_person_url(@person) %>
 	</div>
 </div>

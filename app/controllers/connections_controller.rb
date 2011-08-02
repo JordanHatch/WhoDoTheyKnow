@@ -22,7 +22,7 @@ class ConnectionsController < ApplicationController
   end
 
   def update
-    if @connection.update_parameters(params[:connection])
+    if @connection.update_attributes(params[:connection])
       flash[:notice] = 'This connection has been added'
       redirect_to @connection.person1
     end
