@@ -1,14 +1,16 @@
+<div class="wrap">
 <% 
-minOccurs = Person.minimum('connections_count')
-maxOccurs = Person.maximum('connections_count')                                                                             
-maxFontSize = 34
-minFontSize = 12                                         
+minOccurs = object.minimum('connections_count')
+maxOccurs = object.maximum('connections_count')                                                                             
+maxFontSize = 32
+minFontSize = 16                                         
 %>
 
-<% @unsorted_people.each do |p|
+<% object.all.each do |p|
 	
 	# from http://blogs.dekoh.com/dev/2007/10/29/choosing-a-good-font-size-variation-algorithm-for-your-tag-cloud/
 	weight = (Math.log(p.connections_count)-Math.log(minOccurs))/(Math.log(maxOccurs)-Math.log(minOccurs));
 	fontSizeOfCurrentTag = minFontSize + ((maxFontSize-minFontSize)*weight).round;
 
-%><%= link_to p.name, person_url(p), :title => "#{p.name} (#{p.connections_count} connections)", :style => "font-size: #{fontSizeOfCurrentTag}px" %> <% end -%>                                                                                
+%><%= link_to p.name, person_url(p), :title => "#{p.name} (#{p.connections_count} connections)", :style => "font-size: #{fontSizeOfCurrentTag}px" %>&nbsp;&nbsp;<% end -%>                                                                                
+</div>

@@ -3,8 +3,10 @@ class PeopleController < ApplicationController
   before_filter :get_companies
   
   def index 
-    @people = Person.all :order => 'connections_count DESC'     
-    @unsorted_people = Person.all :order => 'name ASC'                                                                   
+    @people = Person.all :order => 'connections_count DESC'                       
+    
+    @government = Person.where('department = "government"').order('name ASC')
+    @media = Person.where('department = "media"').order('name ASC')                                                                   
   end
 
   def show 

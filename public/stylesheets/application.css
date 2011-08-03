@@ -42,22 +42,35 @@ h3 { font-size: 18px; }
                     
 /** Homepage **/
                         
-.cloud { 
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	background: #FADFFF;
-	border: 1px solid #BDAAC3; 
-	border-radius: 4px;
-	padding: 15px; 
-	width: 400px; 
-}              
-.cloud a {
-	color: #555;
-}               
-          
-.people { width: 400px; }
-.people ul.people_list li { font-size: 14px; padding: 4px 0px;}
+.cloud {                     
+	background: #eee;
+	border: 1px solid #ccc;                                    
+	padding: 0px;            
+	margin-bottom: 10px;
+	width: 470px; 
+}                             
 
+.cloud h3 { background: #62557D; color: #fff; margin: 0px; padding: 10px; } 
+.cloud.cloud_government h3 { background: #324699; }
+.cloud.cloud_media h3 { background: #994787; }
+
+.cloud .wrap { padding: 5px; } 
+.cloud a {
+	color: #666;                                               
+	line-height: 30px;
+	text-decoration: none; 
+}                        
+.cloud a:hover {
+	color: #4575A3;              
+}                            
+
+.intro { color: #888; font-size: 22px; font-weight: 100; line-height: 26px; padding-right: 20px; width: 410px; margin-bottom: 20px; }          
+.intro em { color: #333; font-weight: normal; font-style: normal; }                 
+
+.people { width: 410px; padding-right: 10px; }
+.people h3 { border-bottom: 1px solid #ddd; font-size: 22px; padding-bottom: 10px; font-weight: normal; }
+.people ul.people_list { display: inline-block; vertical-align: top; width: 200px; }
+.people ul.people_list li { font-size: 14px; padding: 4px 0px; }
 
 /** Person pages **/
 
@@ -101,4 +114,5 @@ h3 { font-size: 18px; }
 #person .connections li span { display: block; color: #666; font-size: 13px; }
                                   
 #footer { font-size: 12px; text-align: center; margin: 20px 0px 0px; }
-#footer a, #footer a:link, #footer a:visited { color: #666; }
+#footer a, #footer a:link, #footer a:visited { color: #666; }  
+#footer a:hover, #footer a:active { color: #888; }

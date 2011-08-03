@@ -1,13 +1,30 @@
-<div class="cloud left">
-	<%= render :partial => 'cloud' %>
+<div class="left">
+	<div class="cloud cloud_government">                                                   
+		<h3>Government Connections</h3>
+		<%= render :partial => 'cloud', :locals => { :object => @government } %>
+	</div>                             
+
+	<div class="cloud cloud_media">                                                   
+		<h3>Media Connections</h3>
+		<%= render :partial => 'cloud', :locals => { :object => @media } %>
+	</div>
 </div>
 
-<div class="people right">
-	<ul class="people_list">
-	<% @people.each do |p| -%>
-		<li><%= link_to p.name, p %> (<%= p.connections_count %>)</li>
-	<% end %>
-	</ul>                     
+<div class="right">
+	<div class="intro">
+		<p>Welcome to <em>WhoDoTheyKnow</em>, where you can explore the often obfuscated links between Westminster and Fleet Street. Several recently-released datasets by various parties are collated here to help show the bigger picture of just what exactly is going on behind closed doors.</p> 
+	</div>
+	<div class="people"> 
+		<h3>Browse all people</h3>
+	
+		<% @people.in_groups(2, false) do |column| -%>
+		<ul class="people_list">
+		<% column.each do |p| -%>
+			<li><%= link_to p.name, p %> (<%= p.connections_count %>)</li>
+		<% end %>
+		</ul>
+		<% end -%>                     
+	</div>            
 </div>
 
 <div class="clear"></div>
