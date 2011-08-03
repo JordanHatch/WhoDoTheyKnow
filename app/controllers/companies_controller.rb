@@ -9,7 +9,7 @@ class CompaniesController < ApplicationController
     @company = Company.new params[:company]
     
     if @company.save
-      redirect_to edit_company_url(@company)
+      redirect_to new_company_url
     else
       render :action => :new
     end

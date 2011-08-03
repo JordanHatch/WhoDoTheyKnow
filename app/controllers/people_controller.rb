@@ -6,7 +6,7 @@ class PeopleController < ApplicationController
     @people = Person.all :order => 'connections_count DESC'                       
     
     @government = Person.where('department = "government"').order('name ASC')
-    @media = Person.where('department = "media"').order('name ASC')                                                                   
+    @media = Person.where('department = "media" and connections_count > 0').order('name ASC')                                                                   
   end
 
   def show 
