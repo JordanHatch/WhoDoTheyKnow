@@ -113,6 +113,6 @@ h3 { font-size: 18px; }
 #person .connections li h4 a { }   
 #person .connections li span { display: block; color: #666; font-size: 13px; }
                                   
-#footer { font-size: 12px; text-align: center; margin: 20px 0px 0px; }
+#footer { font-size: 12px; text-align: center; padding-bottom: 60px; margin: 20px 0px 0px; }
 #footer a, #footer a:link, #footer a:visited { color: #666; }  
 #footer a:hover, #footer a:active { color: #888; }
