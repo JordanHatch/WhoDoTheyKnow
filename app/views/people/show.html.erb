@@ -2,7 +2,7 @@
 	<h2><span><%= @person.name %></span> <%= department_for @person %></h2>
 	                            
 	<div class="description">
-		<% if @person.description -%><%= @person.description %><% end -%> <% if @person.company.present? -%>- <%= link_to @person.company.name, company_url(@person.company) %><% end %>
+		<% if @person.description -%><%= @person.description %><% end -%><% if @person.description and !@person.description.empty? and @person.company.present? %> - <% end %><% if @person.company.present? -%><%= @person.company.name %><% end %>
    	</div>                    
 
 	<div class="connections">
