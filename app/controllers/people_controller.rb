@@ -5,8 +5,8 @@ class PeopleController < ApplicationController
   def index 
     @people = Person.all :order => 'connections_count DESC'                       
     
-    @government = Person.where('people.department = "government"').order('name ASC')
-    @media = Person.where('people.department = "media" and connections_count > 0').order('name ASC')                                                                   
+    @government = Person.where("department = ?", 'government').order('name ASC')
+    @media = Person.where('department = ? and connections_count > ?', 'media', 0).order('name ASC')                                                                   
   end
 
   def show 
