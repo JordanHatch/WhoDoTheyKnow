@@ -14,7 +14,11 @@ class Connection < ActiveRecord::Base
     else
       person1
     end
-  end   
+  end       
+  
+  def month
+    self.date.strftime('%m-%Y')
+  end
   
   def update_counters
     person1.update_attributes :connections_count => person1.connections.count

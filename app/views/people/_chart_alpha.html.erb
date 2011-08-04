@@ -1,0 +1,40 @@
+<% 
+time = @start_date
+i = 0       
+rows = []
+
+while time <= @end_date               
+	rows << "data.setValue(#{i}, 0, '#{time.strftime('%b %Y')}');"
+	
+	#connections = @person.connections_by_month[time.strftime('%m-%Y')]
+	#rows << "data.setValue(#{i}, 1, '#{connections.size}');"
+   	time += 1.month
+	i += 1
+end
+%>     
+
+<script type="text/javascript">
+<!--
+         
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {  
+	
+  	var data = new google.visualization.DataTable();
+  	data.addColumn('string', 'Month');
+  	data.addColumn('number', 'Connections');   
+
+    data.addRows(<%= i %>);
+	<% rows.each do |row| %><%= row %>
+	<% end %>
+	
+  	data.setValue(0, 1, 1000);
+
+  	var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+  	chart.draw(data, {width: 400, height: 240, title: null,
+                    hAxis: {title: 'Month', titleTextStyle: {color: 'red'}}
+                   });
+}
+
+-->
+</script>  

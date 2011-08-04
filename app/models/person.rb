@@ -18,10 +18,14 @@ class Person < ActiveRecord::Base
   
   def connections
     (connections_to + connections_from).sort_by(&:date)
+  end    
+  
+  def connections_by_month
+    connections_to.group_by(&:month).sort
   end
   
   def linked_people
-    linked_people_to + linked_people_from
+    (linked_people_to + linked_people_from).inject([]) { |result,h| result << h unless result.include?(h); result }
   end   
   
   # tag cloud

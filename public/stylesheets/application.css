@@ -94,7 +94,19 @@ h3 { font-size: 18px; }
 	font-size: 13px;         
 	font-weight: bold;
 	vertical-align: middle;     
+}        
+#person .badge.badge_mini {
+	font-size: 11px;         
+	cursor: pointer;
+	font-weight: normal;
+	padding: 4px 5px 3px; 
+	margin: 3px 0px;  
+	vertical-align: middle;
+}                  
+#person li.badged span {
+	vertical-align: middle;
 }
+
 #person .badge.government { background-color: #324699; color: #fff; text-shadow: #56210E 0px 1px 1px; }
 #person .badge.media { background-color: #B04173; color: #fff; text-shadow: #58203A 0px 1px 1px; }
 #person .badge.police { background-color: #365CB0; }
@@ -104,10 +116,14 @@ h3 { font-size: 18px; }
 	color: #777;
 	font-size: 14px;
 	font-style: italic; 
-	margin-bottom: 10px; 
-}
+	margin-bottom: 20px; 
+}             
 
-#person .connections { margin: 0px 0px 20px; width: 500px; }
+#person .statistics { width: 200px; }
+#person .statistics p { color: #777; margin-bottom: 13px; font-size: 20px; }
+#person .statistics p em { display: block; color: #555; font-style: normal; font-weight: bold; font-size: 32px;}
+
+#person .connections { border-left: 1px solid #ddd; padding-left: 20px; margin: 0px 0px 20px; width: 700px; }
 #person .connections li { border-bottom: 1px solid #eee; padding: 7px 0px; }
 #person .connections li h4 { font-size: 16px; font-weight: normal; margin-bottom: 4px;}
 #person .connections li h4 a { }   

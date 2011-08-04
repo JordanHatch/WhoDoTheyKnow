@@ -10,6 +10,8 @@ class PeopleController < ApplicationController
   end
 
   def show 
+    @start_date = Date.civil(2010,5,1).to_time
+    @end_date = Date.civil(2011,6,1).to_time
     
   end        
   

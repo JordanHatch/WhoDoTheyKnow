@@ -1,6 +1,6 @@
 module PeopleHelper    
   
-  def department_for(person)   
+  def department_for(person, mode = 'full')   
     if person.department?
              
       case person.department
@@ -13,8 +13,16 @@ module PeopleHelper
       when 'judiciary'
         department = 'Judiciary' 
       end
+                                      
+      department_class = department.downcase
+      department_title = department
+      if mode == 'mini'               
+        department_show = department[0,1]
+      else
+        department_show = department
+      end
     
-      "<span class='badge #{department.downcase}'>#{department}</span>".html_safe
+      "<span class='badge badge_#{mode} #{department_class}' title='#{department_title}'>#{department_show}</span>".html_safe
     
     end
   end      
