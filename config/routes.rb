@@ -1,19 +1,8 @@
 WhoDoTheyKnow::Application.routes.draw do
-                             
-  get "companies/new"
 
-  get "companies/edit"
-
-  get "connections/new"
-
-  resources :people do
-    resources :connections, :only => [:new,:create,:edit,:update]
-  end         
-  
-  resources :companies
-  
+  resources :people, :only => :show
   root :to => 'people#index'
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
