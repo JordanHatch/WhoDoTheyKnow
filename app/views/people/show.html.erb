@@ -1,37 +1,33 @@
 <div id="person">
 	<h2><span><%= @person.name %></span> <%= department_for @person %></h2>
-	                            
+
 	<div class="description">
 		<% if @person.description -%><%= @person.description %><% end -%><% if @person.description and !@person.description.empty? and @person.company.present? %> - <% end %><% if @person.company.present? -%><%= @person.company.name %><% end %>
-   	</div>                    
-               
+   	</div>
+
 	<div class="statistics left">
 		<p class="stat_connections"><em><%= @person.connections_count %></em> connections</p>
-		
+
 		<p class="stat_people"><em><%= @person.linked_people.size %></em> connected people</p>
-		
+
 		<ul class="people">
 			<% @person.linked_people.each do |p| -%>
 				<li class="badged"><%= department_for p, 'mini' %> <span><%= link_to p.name, p %></span></li>
 			<% end %>
 		</ul>
-	</div>                                                                                            
+	</div>
 
 	<div class="connections right">
 		<h3>All meetings by <%= @person.name %></h3>
 		<ul>
 		<% @person.connections.each do |c| -%>
 			<li>
-				<h4><%= link_to c.person(@person).name, c.person(@person) %> <!--<%= department_for c.person(@person) %>--></h4>
-				<span class="meta"><%= (c.description?) ? "#{c.description} - in" : "" %> <%= c.date.strftime("%B %Y") %> - <% if c.source == 'url' -%><% link_to 'source', c.source_url %><% elsif c.source == 'data' %>from dataset<% end %> <!--<%= link_to "edit", edit_person_connection_url(c.person1, c) %>--></span>
+				<h4><%= link_to c.person(@person).name, c.person(@person) %></h4>
+				<span class="meta"><%= (c.description?) ? "#{c.description} - in" : "" %> <%= c.date.strftime("%B %Y") %> - <% if c.source == 'url' -%><% link_to 'source', c.source_url %><% elsif c.source == 'data' %>from dataset<% end %></span>
 			</li>
 		<% end -%>
 		</ul>
 	</div>
-	
+
 	<div class="clear"></div>
-	
-	<!--<div class="add_connection">
-		<%= link_to 'Add a connection', new_person_connection_url(@person) %> - <%= link_to 'Edit this person', edit_person_url(@person) %>
-	</div>-->
-</div> 
+</div>
